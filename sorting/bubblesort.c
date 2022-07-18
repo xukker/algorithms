@@ -7,7 +7,7 @@ void * swap (int* arr, int i, int k) {
 
 void sort(int* arr, long its) {
   for (int i=0; i<its-1; i++) {
-    for (int k=i; k<its-i-1; k++) {
+    for (int k=0; k<its-i-1; k++) {
       if (arr[k] > arr[k+1]) {
         swap(arr, k, k+1);
       }

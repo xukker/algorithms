@@ -22,6 +22,12 @@ void shuffle(int* arr, int n) {
   }
 }
 
+void print(int* arr, long its) {
+  for (int i=0; i<its; i++) {
+    printf("%d ", arr[i]);
+  }
+}
+
 int main() {
   int steps = 0;
   int arr[] = {1,7,3,29,5};
@@ -30,5 +36,6 @@ int main() {
     shuffle(arr, n);
     steps += 1;
   }
+	print(arr, n);
   printf("%d", steps);
 }
