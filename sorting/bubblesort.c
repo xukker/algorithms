@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 void * swap (int* arr, int i, int k) {
   int tmp = arr[i];
   arr[i] = arr[k];
@@ -23,7 +22,7 @@ void print(int* arr, long its) {
 }
 
 int main() {
-  int arr[] = {1,8,3,4,5};
+  int arr[] = {1,7,3,29,5};
   size_t its = sizeof(arr)/sizeof(*arr);
   sort(arr, its);
   print(arr, its);
