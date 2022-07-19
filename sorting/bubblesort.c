@@ -5,26 +5,30 @@ void * swap (int* arr, int i, int k) {
   arr[k] = tmp;
 }
 
-void sort(int* arr, long its) {
-  for (int i=0; i<its-1; i++) {
-    for (int k=0; k<its-i-1; k++) {
+void print(int* arr, long n, int steps) {
+  for (int i=0; i<n; i++) {
+    printf("%d ", arr[i]);
+  }
+  printf("%d \n", steps);
+}
+
+void sort(int* arr, long n, int steps) {
+  for (int i=0; i<n-1; i++) {
+    for (int k=0; k<n-i-1; k++) {
       if (arr[k] > arr[k+1]) {
+        print(arr, n, steps);
         swap(arr, k, k+1);
+        steps += 1;
       }
     }
   }
 }
 
-void print(int* arr, long its) {
-  for (int i=0; i<its; i++) {
-    printf("%d ", arr[i]);
-  }
-}
-
 int main() {
   int arr[] = {1,7,3,29,5};
-  size_t its = sizeof(arr)/sizeof(*arr);
-  sort(arr, its);
-  print(arr, its);
+  int steps = 0;
+  size_t n = sizeof(arr)/sizeof(*arr);
+  sort(arr, n, steps);
+  print(arr, n, steps);
   return 0;
 }

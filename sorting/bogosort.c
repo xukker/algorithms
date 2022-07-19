@@ -22,10 +22,11 @@ void shuffle(int* arr, int n) {
   }
 }
 
-void print(int* arr, long its) {
-  for (int i=0; i<its; i++) {
+void print(int* arr, long n, int steps) {
+  for (int i=0; i<n; i++) {
     printf("%d ", arr[i]);
   }
+  printf("%d \n", steps);
 }
 
 int main() {
@@ -34,8 +35,7 @@ int main() {
   size_t n = sizeof(arr)/sizeof(arr[0]);
   while (sortcheck(arr, n) != 1) {
     shuffle(arr, n);
+	  print(arr, n, steps);
     steps += 1;
   }
-	print(arr, n);
-  printf("%d", steps);
 }
