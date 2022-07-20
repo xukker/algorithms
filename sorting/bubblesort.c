@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 void * swap (int* arr, int i, int k) {
   int tmp = arr[i];
   arr[i] = arr[k];
