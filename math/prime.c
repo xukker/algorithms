@@ -28,7 +28,7 @@ int * primes(int n) {
 }	
 
 int main() {
-	int max = 100;
+	int max = 100000;
 	for (int i=2; i<=max; i++) {
 		printf("%d: ", i);
 		int* fact = primes(i);
